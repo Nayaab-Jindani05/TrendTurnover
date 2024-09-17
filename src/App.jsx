@@ -1,15 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/navbar/NavBar';
 import Footer from './components/footer/Footer';
-import Banner from './components/banner/Banner';
-import Promo from './components/promo/Promo';
+import SellForm from './components/sellform/Sellform';
+import Home from './pages/home/Home'; // Import your Home component
 
 function App() {
     return (
         <>
+        <Router>
             <NavBar />
-            <Banner/>
-            <Promo/>            
-            <Footer/>
+            <Routes>
+                <Route path="/" element={<Home />} /> {/* Banner and Promo will be part of Home */}
+                <Route path="/sell" element={<SellForm />} /> {/* No Banner and Promo here */}
+                
+            </Routes>
+            <Footer />
+        </Router>
         </>
     );
 }

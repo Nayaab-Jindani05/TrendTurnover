@@ -1,16 +1,14 @@
 import "./Home.css";
+import Banner from '../../components/banner/Banner';  // Use two levels up to find the Banner
+import Promo from '../../components/promo/Promo';    // Similarly, adjust the path for Promo
+
 
 export default function Home() {
     return (
-        <div className="container">
-          <nav>
-          <div className="button-container">
-            <button className="button">Sell</button>
-            <button className="button">Earn</button>
-            <button className="button">Guide</button>
-            <button className="button">Contact</button>
-          </div>
-          </nav>
+        <div>
+            <Banner />
+            <Promo />
+           
         </div>
-      );
+    );
 }
