@@ -2,6 +2,13 @@
   background-color: #676567;
   color: white;
   padding: 40px 0;
+  position: relative;
+  
+}
+
+.main-container {
+  min-height: calc(100vh - 60px); /* Adjust based on your footer height */
+  padding-bottom: 60px; /* Same as footer height to prevent content overlap */
 }
 
 .container {

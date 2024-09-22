@@ -1,79 +1,107 @@
-/* Style for the reselling form page */
-.sell-form-container {
-    max-width: 600px;
-    margin: 200px auto; /* Adds margin above and below the form */
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+html, body {
+  min-height: 100%;
+}
+
+body, div, form, input, select, p { 
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif; /* Default font */
+  font-size: 16px;
+  color: #190c0c;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap'); /* Attractive font */
+
+body {
+  background: url("/uploads/media/default/0001/01/b5edc1bad4dc8c20291c8394527cb2c5b43ee13c.jpeg") no-repeat center;
+  background-size: cover;
+}
+
+.main-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 25px;
+  background: #efc87580; 
+}
+
+.left-part {
+  text-align: center;
+}
+
+.left-part h1 {
+  text-transform: uppercase;
+}
+.left-part h1 {
+  text-transform: uppercase;
+  transition: color 0.5s ease; /* Smooth color transition */
+}
+
+/* Optionally add hover effect for the heading */
+.left-part h1:hover {
+  color: #ad8c60; /* Change color on hover */
+}
+
+.form-container {
+  background: #ad8c60; /* New background color */
+  padding: 25px;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5); /* Optional shadow for depth */
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-control {
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+}
+
+.form-control::placeholder {
+  color: #675a5a;
+}
+
+.submit-button {
+  padding: 10px 5px;
+  margin-top: 20px;
+  border-radius: 5px; 
+  border: none;
+  background: #efc87580; 
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 400;
+  color: #201717;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #eae9e580;
+}
+
+@media (min-width: 568px) {
+  .main-block {
+      flex-direction: row;
   }
-  
-  .form-title {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #333;
+  .left-part, .form-container {
+      flex: 1;
   }
-  
-  .form-description {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 16px;
-    color: #666;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  .form-label {
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-    color: #555;
-  }
-  
-  .form-control {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form-control:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-  
-  .submit-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-button:hover {
-    background-color: #0056b3;
-  }
-  
-  @media (max-width: 600px) {
-    .sell-form-container {
-      padding: 15px;
-    }
-  
-    .form-title {
-      font-size: 24px;
-    }
-  
-    .form-control {
-      font-size: 14px;
-    }
-  }
-  
+}
